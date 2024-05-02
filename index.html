@@ -12,8 +12,7 @@ CDT Lu took a look and provided feedback on making the stroke of the India Plot 
 This helped me fine tune the graphs and have them look better in my opinon.
 07 Mar 2024. West Point, NY.
 -->
-<html lang="en">
-  <head>
+<html lang="en"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -73,6 +72,14 @@ This helped me fine tune the graphs and have them look better in my opinon.
                     And while India is growing its population at a decreasing rate, it appears that major cities are both increasing and decreasing in growth rate.
                     Note that a 2.5% growth rate in a major city can be an additional 250,000 people.
                 </div>
+                <br>
+                <br>
+                <div>
+                    Another interesting avenue to look at this is from a GDP standpoint. 
+                    As India becomes more populated, is there an effect on their GDP?
+                    Naturally, as India has an growing working class, one might presume these are connected.
+                    The GDP plot scratches the surface on this and encourages further investigation into this. 
+                </div>
                 <h3>
                     How to Use Population Density Map
                 </h3>
@@ -83,25 +90,36 @@ This helped me fine tune the graphs and have them look better in my opinon.
                 </ul>
             </div>
             <div class="maps-column">
-                <div id="observablehq-viewof-tiff_file-fde7bd5a"></div>
-                <div id="observablehq-India_plot-fde7bd5a"></div>
-                <hr style="height:0.2px">
-                <div id="observablehq-India_Lollipop-fde7bd5a"></div>
-                <hr style="height:0.2px">
-                <div id="observablehq-India_City_Density-1c55e5a1"></div>
+                <div id="observablehq-viewof-tiff_file-708fd590"></div>
+                <div id="observablehq-India_plot-708fd590"></div>
             </div>
         </div>
+        <hr style="height:0.2px">
+        <div id="observablehq-viewof-yearSlider-708fd590"></div>
+        <div class="column-container">
+            <div>
+                <div id="observablehq-India_Lollipop-708fd590"></div>
+            </div>
+            <div>
+                <div id="observablehq-gdp_chart-708fd590"></div>
+            </div>
+            <hr style="height:0.2px">
+        </div>
+        <h1>
+            Thanks for viewing! Hopefully this generated some more questions for you!
+        </h1>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
         <script type="module">
-        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-        import define from "https://api.observablehq.com/d/c1c0f32a60a9b4f2.js?v=4";
-        new Runtime().module(define, name => {
-          if (name === "viewof tiff_file") return new Inspector(document.querySelector("#observablehq-viewof-tiff_file-fde7bd5a"));
-          if (name === "India_plot") return new Inspector(document.querySelector("#observablehq-India_plot-fde7bd5a"));
-          if (name === "India_City_Density") return new Inspector(document.querySelector("#observablehq-India_City_Density-1c55e5a1"));
-          if (name === "India_Lollipop") return new Inspector(document.querySelector("#observablehq-India_Lollipop-fde7bd5a"));
-          return ["tiff","bb","raster","new_raster","another_new_raster"].includes(name);
-        });
+            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/c1c0f32a60a9b4f2@787.js?v=4";
+            new Runtime().module(define, name => {
+              if (name === "viewof tiff_file") return new Inspector(document.querySelector("#observablehq-viewof-tiff_file-708fd590"));
+              if (name === "India_plot") return new Inspector(document.querySelector("#observablehq-India_plot-708fd590"));
+              if (name === "India_Lollipop") return new Inspector(document.querySelector("#observablehq-India_Lollipop-708fd590"));
+              if (name === "viewof yearSlider") return new Inspector(document.querySelector("#observablehq-viewof-yearSlider-708fd590"));
+              if (name === "gdp_chart") return new Inspector(document.querySelector("#observablehq-gdp_chart-708fd590"));
+              return ["tiff","bb","raster","new_raster","another_new_raster","filterd_India_GDP_Merged","hexagonLayer","deckgl"].includes(name);
+            });
         </script>
     </main>
     <p>Credit: <a href="https://observablehq.com/d/c1c0f32a60a9b4f2">Population Density of India over Time by nakul-27</a></p>
